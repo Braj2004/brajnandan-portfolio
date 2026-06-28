@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Brajnandan Prasad — BI & Data Analytics</title>
+<title>Brajnandan Prasad — Data Science & Data Analytics</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,7 +30,7 @@
   }
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
-
+ 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -43,7 +43,7 @@
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a { color: var(--muted); font-size: 13px; font-weight: 500; text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); }
-
+ 
   /* HERO */
   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 7rem 2rem 5rem; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; top: -20%; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(79,142,247,0.1) 0%, transparent 60%); pointer-events: none; }
@@ -51,7 +51,7 @@
   .hero-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; margin-bottom: 1rem; z-index: 1; position: relative; }
   .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 700; line-height: 1.08; margin-bottom: 1.2rem; z-index: 1; position: relative; }
   .hero h1 span { background: linear-gradient(135deg, var(--accent), var(--accent2) 50%, var(--accent3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .hero-sub { font-size: 1rem; color: var(--muted); max-width: 540px; margin: 0 auto 1rem; z-index: 1; position: relative; }
+  .hero-sub { font-size: 1rem; color: var(--muted); max-width: 560px; margin: 0 auto 1rem; z-index: 1; position: relative; }
   .hero-contact { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; font-size: 13px; color: var(--muted2); margin-bottom: 2rem; z-index: 1; position: relative; }
   .hero-contact a { color: var(--muted); text-decoration: none; }
   .hero-contact a:hover { color: var(--accent); }
@@ -63,22 +63,23 @@
   .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 5px; color: var(--muted2); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; z-index: 1; animation: bounce 2s ease-in-out infinite; }
   @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
   .hero-scroll svg { width: 16px; height: 16px; stroke: var(--muted2); fill: none; }
-
+ 
   /* SECTION */
   section { padding: 5rem 2rem; max-width: 980px; margin: 0 auto; }
   .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
   .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; margin-bottom: 0.8rem; }
   .section-desc { color: var(--muted); max-width: 580px; margin-bottom: 2.5rem; font-size: 15px; }
   .divider { width: 100%; height: 0.5px; background: var(--border); max-width: 980px; margin: 0 auto; }
-
+ 
   /* ABOUT */
   .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: start; }
   .about-text p { color: var(--muted); margin-bottom: 0.9rem; font-size: 15px; }
+  .about-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.4rem; }
   .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
   .stat-card { background: var(--card); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.1rem; }
   .stat-card .num { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--accent); line-height: 1; }
   .stat-card .label { font-size: 11px; color: var(--muted); margin-top: 4px; }
-
+ 
   /* EXPERIENCE */
   .exp-list { display: flex; flex-direction: column; gap: 1.2rem; }
   .exp-card { background: var(--card); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.6rem; position: relative; overflow: hidden; }
@@ -90,7 +91,7 @@
   .exp-card ul { list-style: none; padding: 0; margin-top: 0.8rem; }
   .exp-card ul li { font-size: 13px; color: var(--muted); padding: 3px 0 3px 1.2rem; position: relative; }
   .exp-card ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent2); font-size: 11px; top: 5px; }
-
+ 
   /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
   .skill-card { background: var(--card); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.2rem; transition: border-color 0.2s, transform 0.2s; }
@@ -106,7 +107,7 @@
   .t-py { background: var(--tag-py); color: var(--tag-py-t); }
   .t-bi { background: var(--tag-bi); color: var(--tag-bi-t); }
   .t-ml { background: var(--tag-ml); color: var(--tag-ml-t); }
-
+ 
   /* PROJECTS */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; }
   .project-card { background: var(--card); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.4rem; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s; }
@@ -117,7 +118,7 @@
   .project-card p { font-size: 12px; color: var(--muted); flex: 1; line-height: 1.6; }
   .project-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.7rem; border-top: 0.5px solid var(--border); flex-wrap: wrap; gap: 6px; }
   .proj-date { font-size: 11px; color: var(--muted2); }
-
+ 
   /* PUBLICATIONS */
   .pub-list { display: flex; flex-direction: column; gap: 1.2rem; }
   .pub-card { background: var(--card); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.6rem; position: relative; overflow: hidden; }
@@ -130,7 +131,7 @@
   .pub-card ul { list-style: none; padding: 0; }
   .pub-card ul li { font-size: 13px; color: var(--muted); padding: 3px 0 3px 1.2rem; position: relative; }
   .pub-card ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent3); font-size: 11px; top: 5px; }
-
+ 
   /* CERTS */
   .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
   .cert-card { background: var(--card); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.2rem; display: flex; gap: 12px; align-items: flex-start; transition: border-color 0.2s; }
@@ -138,7 +139,7 @@
   .cert-icon { width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
   .cert-card h3 { font-size: 13px; font-weight: 600; margin-bottom: 3px; line-height: 1.4; }
   .cert-card p { font-size: 11px; color: var(--muted2); }
-
+ 
   /* CONTACT */
   .contact-card { background: var(--card); border: 0.5px solid var(--border); border-radius: 16px; padding: 3rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
   .contact-card::before { content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(79,142,247,0.07) 0%, transparent 65%); pointer-events: none; }
@@ -148,9 +149,9 @@
   .social-link { display: flex; align-items: center; gap: 7px; padding: 0.55rem 1.2rem; border-radius: 8px; background: rgba(255,255,255,0.03); border: 0.5px solid var(--border2); color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; transition: border-color 0.2s, color 0.2s, background 0.2s; }
   .social-link:hover { border-color: var(--accent); color: var(--accent); background: rgba(79,142,247,0.07); }
   .social-link svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
-
+ 
   footer { text-align: center; padding: 2rem; font-size: 12px; color: var(--muted2); border-top: 0.5px solid var(--border); }
-
+ 
   @media (max-width: 680px) {
     nav { padding: 1rem 1.25rem; }
     .nav-links { display: none; }
@@ -162,7 +163,7 @@
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <div class="nav-logo">BP</div>
   <ul class="nav-links">
@@ -174,13 +175,13 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
+ 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-avatar">BP</div>
-  <p class="hero-eyebrow">Business Intelligence &amp; Data Analytics Professional</p>
+  <p class="hero-eyebrow">Data Science &amp; Data Analytics Professional</p>
   <h1>Brajnandan <span>Prasad</span></h1>
-  <p class="hero-sub">Final-year CS graduate specialising in SQL, Python analytics, Power BI dashboards, and end-to-end ML pipelines. Turning data into decisions.</p>
+  <p class="hero-sub">Final-year CS graduate specialising in Python analytics, SQL, Power BI dashboards, predictive modeling, and end-to-end ML pipelines. Turning raw data into actionable business decisions.</p>
   <div class="hero-contact">
     <a href="mailto:brajnandanprasad21@gmail.com">brajnandanprasad21@gmail.com</a>
     <span>+91-8210683388</span>
@@ -197,19 +198,22 @@
     <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
   </div>
 </div>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- ABOUT -->
 <section id="about">
   <p class="section-label">About Me</p>
   <h2 class="section-title">Who I am</h2>
   <div class="about-grid">
-    <div class="about-text">
-      <p>I'm a results-driven final-year Computer Science graduate from Assam University, Silchar (CGPA: 7.87), specialising in Business Intelligence and Data Analytics.</p>
-      <p>I have hands-on experience processing large structured datasets, building scalable reporting solutions in Power BI and Tableau, developing ML pipelines in Python, and writing optimised SQL queries for operational and strategic decision-making.</p>
-      <p>I've interned at SaiKet Systems and Oasis Infobyte, published research on ensemble ML for agriculture, and submitted a deep learning weather forecasting paper to IEEE. I'm seeking a BI Consultant role where I can deliver actionable insights.</p>
-      <div style="margin-top:1.4rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+    <div>
+      <div class="about-text">
+        <p>I'm a results-driven Computer Science graduate from Assam University, Silchar (CGPA: 7.87), specialising in <strong style="color:var(--text)">Data Science, Data Analytics, Machine Learning, and Business Intelligence</strong>.</p>
+        <p>I have hands-on experience in Python, SQL, Power BI, Tableau, pandas, Scikit-learn, ETL, Exploratory Data Analysis (EDA), Feature Engineering, Data Visualisation, Statistical Analysis, Predictive Analytics, and developing end-to-end machine learning pipelines to transform complex datasets into actionable business insights.</p>
+        <p>During internships at SaiKet Systems and Oasis Infobyte, I analysed large-scale datasets (50,000+ records), built predictive ML models achieving 93% accuracy, developed interactive Power BI dashboards, and automated reporting workflows. I have also published peer-reviewed research on Ensemble ML for crop recommendation and submitted a Deep Learning–based Time Series Weather Forecasting paper to the IEEE 2026 Silchar Subsection Conference.</p>
+        <p>Seeking a <strong style="color:var(--accent)">Data Scientist, Data Analyst, or BI Analyst</strong> role to leverage analytical, statistical, and programming skills for solving real-world business problems.</p>
+      </div>
+      <div class="about-btns">
         <a href="https://github.com/Braj2004" target="_blank" class="btn-primary">GitHub Profile ↗</a>
         <a href="https://www.linkedin.com/in/brajnandan-prasad-2b43b72a6/" target="_blank" class="btn-secondary">LinkedIn ↗</a>
       </div>
@@ -222,15 +226,15 @@
     </div>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <p class="section-label">Experience</p>
   <h2 class="section-title">Where I've worked</h2>
   <div class="exp-list">
-
+ 
     <div class="exp-card">
       <div class="exp-header">
         <div>
@@ -240,13 +244,12 @@
         <div class="exp-date">Dec 2025 – Jan 2026</div>
       </div>
       <ul>
-        <li>Processed and analysed 50,000+ telecom customer records using Python and SQL, uncovering customer behaviour patterns and actionable business insights.</li>
-        <li>Developed and optimised churn prediction models using Logistic Regression and Random Forest, achieving 93% accuracy and improving prediction efficiency by 25%.</li>
-        <li>Designed interactive Power BI dashboards to visualise churn trends, customer segmentation, and KPIs for business stakeholders.</li>
-        <li>Performed data cleaning, feature engineering, and preprocessing using pandas and NumPy, reducing model training time by 20% and improving reporting accuracy.</li>
+        <li>Ingested and analysed <strong style="color:var(--text)">50,000+ telecom customer records</strong> using Python (pandas, NumPy) and SQL; performed EDA, ETL preprocessing, and customer segmentation to uncover churn patterns and behavioural insights.</li>
+        <li>Built churn prediction models (Logistic Regression, Random Forest — Scikit-learn) achieving <strong style="color:var(--text)">93% accuracy</strong> and 25% efficiency gain; designed interactive <strong style="color:var(--text)">Power BI dashboards</strong> with DAX &amp; Power Query for KPI reporting and executive-level decision-making.</li>
+        <li>Automated feature engineering and preprocessing pipelines with pandas/NumPy, reducing model training time by <strong style="color:var(--text)">20%</strong> and improving reporting accuracy.</li>
       </ul>
     </div>
-
+ 
     <div class="exp-card">
       <div class="exp-header">
         <div>
@@ -256,164 +259,164 @@
         <div class="exp-date">Jun 2025</div>
       </div>
       <ul>
-        <li>Developed and evaluated machine learning models on real-world datasets, improving prediction performance through feature engineering and model optimisation.</li>
-        <li>Conducted end-to-end data preprocessing, exploratory data analysis (EDA), and visualisation using Python, matplotlib, and seaborn.</li>
-        <li>Analysed structured datasets to identify trends, generate business insights, and support reporting and operational decision-making.</li>
+        <li>Developed and evaluated ML models on real-world datasets, improving prediction performance <strong style="color:var(--text)">15–20%</strong> through feature engineering and hyperparameter tuning.</li>
+        <li>Conducted end-to-end data preprocessing, <strong style="color:var(--text)">exploratory data analysis (EDA)</strong>, and visualisation using Python, matplotlib, and seaborn; generated analytical reports to support operational decision-making.</li>
+        <li>Applied statistical analysis to identify trends and generate business insights from structured datasets.</li>
       </ul>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <p class="section-label">Skills</p>
   <h2 class="section-title">Technical competencies</h2>
   <div class="skills-grid">
-
+ 
     <div class="skill-card">
-      <div class="skill-head"><div class="skill-icon" style="background:rgba(79,142,247,0.1)">🗄️</div><h3>SQL</h3></div>
+      <div class="skill-head"><div class="skill-icon" style="background:rgba(79,142,247,0.1)">🗄️</div><h3>SQL & Databases</h3></div>
       <div class="bar-wrap"><div class="bar" style="width:90%"></div></div>
       <div class="skill-tags"><span class="tag t-blue">Joins</span><span class="tag t-blue">Subqueries</span><span class="tag t-blue">Aggregations</span><span class="tag t-blue">Optimisation</span><span class="tag t-blue">MySQL</span><span class="tag t-blue">PostgreSQL</span></div>
     </div>
-
+ 
     <div class="skill-card">
-      <div class="skill-head"><div class="skill-icon" style="background:rgba(55,176,221,0.1)">🐍</div><h3>Python</h3></div>
+      <div class="skill-head"><div class="skill-icon" style="background:rgba(55,176,221,0.1)">🐍</div><h3>Python for Data</h3></div>
       <div class="bar-wrap"><div class="bar" style="width:88%"></div></div>
-      <div class="skill-tags"><span class="tag t-py">pandas</span><span class="tag t-py">numpy</span><span class="tag t-py">matplotlib</span><span class="tag t-py">seaborn</span><span class="tag t-py">EDA</span><span class="tag t-py">Automation</span></div>
+      <div class="skill-tags"><span class="tag t-py">pandas</span><span class="tag t-py">NumPy</span><span class="tag t-py">matplotlib</span><span class="tag t-py">seaborn</span><span class="tag t-py">EDA</span><span class="tag t-py">ETL</span></div>
     </div>
-
+ 
     <div class="skill-card">
-      <div class="skill-head"><div class="skill-icon" style="background:rgba(124,92,252,0.1)">📊</div><h3>Power BI</h3></div>
+      <div class="skill-head"><div class="skill-icon" style="background:rgba(124,92,252,0.1)">📊</div><h3>Power BI & Tableau</h3></div>
       <div class="bar-wrap"><div class="bar" style="width:85%"></div></div>
-      <div class="skill-tags"><span class="tag t-bi">Dashboards</span><span class="tag t-bi">DAX</span><span class="tag t-bi">Power Query</span><span class="tag t-bi">KPI Reports</span></div>
+      <div class="skill-tags"><span class="tag t-bi">Dashboards</span><span class="tag t-bi">DAX</span><span class="tag t-bi">Power Query</span><span class="tag t-bi">KPI Reports</span><span class="tag t-bi">Tableau</span></div>
     </div>
-
+ 
     <div class="skill-card">
       <div class="skill-head"><div class="skill-icon" style="background:rgba(45,212,191,0.1)">🤖</div><h3>Machine Learning</h3></div>
       <div class="bar-wrap"><div class="bar" style="width:82%"></div></div>
-      <div class="skill-tags"><span class="tag t-ml">Scikit-learn</span><span class="tag t-ml">TensorFlow</span><span class="tag t-ml">Random Forest</span><span class="tag t-ml">Regression</span></div>
+      <div class="skill-tags"><span class="tag t-ml">Scikit-learn</span><span class="tag t-ml">TensorFlow</span><span class="tag t-ml">Random Forest</span><span class="tag t-ml">Time Series</span><span class="tag t-ml">Predictive Modeling</span></div>
     </div>
-
+ 
     <div class="skill-card">
-      <div class="skill-head"><div class="skill-icon" style="background:rgba(248,129,37,0.1)">📉</div><h3>Tableau &amp; Excel</h3></div>
-      <div class="bar-wrap"><div class="bar" style="width:78%"></div></div>
-      <div class="skill-tags"><span class="tag t-blue">Tableau</span><span class="tag t-blue">Pivot Tables</span><span class="tag t-blue">Power Query</span><span class="tag t-blue">Advanced Formulas</span></div>
+      <div class="skill-head"><div class="skill-icon" style="background:rgba(248,129,37,0.1)">📐</div><h3>Statistics & Analytics</h3></div>
+      <div class="bar-wrap"><div class="bar" style="width:80%"></div></div>
+      <div class="skill-tags"><span class="tag t-blue">Statistical Analysis</span><span class="tag t-blue">Feature Engineering</span><span class="tag t-blue">Hypothesis Testing</span><span class="tag t-blue">Data Wrangling</span></div>
     </div>
-
+ 
     <div class="skill-card">
-      <div class="skill-head"><div class="skill-icon" style="background:rgba(241,224,90,0.1)">🌐</div><h3>Web &amp; Dev Tools</h3></div>
+      <div class="skill-head"><div class="skill-icon" style="background:rgba(241,224,90,0.1)">⚙️</div><h3>Dev & Tools</h3></div>
       <div class="bar-wrap"><div class="bar" style="width:72%"></div></div>
-      <div class="skill-tags"><span class="tag t-py">React.js</span><span class="tag t-py">Node.js</span><span class="tag t-py">REST APIs</span><span class="tag t-py">Git</span><span class="tag t-py">Linux</span><span class="tag t-py">MongoDB</span></div>
+      <div class="skill-tags"><span class="tag t-py">Git</span><span class="tag t-py">Docker</span><span class="tag t-py">Linux</span><span class="tag t-py">FastAPI</span><span class="tag t-py">Streamlit</span><span class="tag t-py">Jupyter</span></div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- PROJECTS -->
 <section id="projects">
   <p class="section-label">Projects</p>
-  <h2 class="section-title">Analytics &amp; BI projects</h2>
-  <p class="section-desc">End-to-end solutions spanning data preprocessing, machine learning, dashboards, and full-stack development.</p>
+  <h2 class="section-title">Data Science &amp; Analytics Projects</h2>
+  <p class="section-desc">End-to-end solutions spanning data preprocessing, predictive modeling, BI dashboards, and full-stack development.</p>
   <div class="projects-grid">
-
+ 
     <div class="project-card">
       <div class="project-top">
         <div class="project-icon" style="background:rgba(124,92,252,0.1)">📡</div>
         <span class="tag t-bi" style="font-size:10px">Power BI · Python</span>
       </div>
       <h3>Telecom Customer Churn Analysis</h3>
-      <p>End-to-end analytics solution — data preprocessing, EDA, ML (Logistic Regression &amp; Random Forest), and interactive Power BI KPI dashboards across 50,000+ records.</p>
+      <p>End-to-end analytics pipeline — ETL, EDA, churn prediction (93% accuracy via Random Forest), and interactive Power BI KPI dashboards with customer segmentation across 50,000+ records.</p>
       <div class="project-footer">
         <div class="skill-tags"><span class="tag t-bi">Power BI</span><span class="tag t-py">Pandas</span><span class="tag t-ml">Scikit-learn</span></div>
         <span class="proj-date">Dec 2025</span>
       </div>
     </div>
-
+ 
     <div class="project-card">
       <div class="project-top">
         <div class="project-icon" style="background:rgba(55,176,221,0.1)">📈</div>
-        <span class="tag t-py" style="font-size:10px">Python · ML</span>
+        <span class="tag t-py" style="font-size:10px">Predictive Analytics</span>
       </div>
       <h3>Unemployment Analysis in India</h3>
-      <p>Predictive models using regression and classification to analyse large-scale unemployment datasets. Feature engineering, hyperparameter tuning, and visual reports for policy insights.</p>
+      <p>Regression &amp; classification models with feature engineering and hyperparameter tuning on large-scale unemployment datasets. Statistical trend analysis and visual reports for policy-level insights.</p>
       <div class="project-footer">
         <div class="skill-tags"><span class="tag t-py">Pandas</span><span class="tag t-py">NumPy</span><span class="tag t-ml">Scikit-learn</span></div>
         <span class="proj-date">Jul 2025</span>
       </div>
     </div>
-
+ 
     <div class="project-card">
       <div class="project-top">
         <div class="project-icon" style="background:rgba(45,212,191,0.1)">💹</div>
         <span class="tag t-ml" style="font-size:10px">BI Reporting</span>
       </div>
       <h3>Sales Performance Analysis</h3>
-      <p>Analysed revenue, sales growth, and customer performance metrics. Developed interactive visualisations and KPI performance reports for strategic planning and decision support.</p>
+      <p>Analysed revenue, conversion rates, deal size, and CAC. Built interactive KPI dashboards and performance reports using Matplotlib &amp; Seaborn for strategic planning and data-driven decision-making.</p>
       <div class="project-footer">
         <div class="skill-tags"><span class="tag t-py">Matplotlib</span><span class="tag t-py">Seaborn</span><span class="tag t-bi">KPI</span></div>
         <span class="proj-date">May 2025</span>
       </div>
     </div>
-
+ 
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-icon" style="background:rgba(45,212,191,0.1)">🌦️</div>
+        <span class="tag t-ml" style="font-size:10px">Deep Learning · Time Series</span>
+      </div>
+      <h3>Assam Weather Forecast v1.0</h3>
+      <p>Deep learning time series forecasting web app using 1981–2024 NASA POWER meteorological data. District-wise predictions for temperature, humidity &amp; rainfall. R² up to 0.98.</p>
+      <div class="project-footer">
+        <div class="skill-tags"><span class="tag t-ml">Deep Learning</span><span class="tag t-py">TensorFlow</span><span class="tag t-ml">Time Series</span></div>
+        <span class="proj-date">2026</span>
+      </div>
+    </div>
+ 
+    <div class="project-card">
+      <div class="project-top">
+        <div class="project-icon" style="background:rgba(79,142,247,0.1)">🌾</div>
+        <span class="tag t-ml" style="font-size:10px">Ensemble ML · Research</span>
+      </div>
+      <h3>Crop Recommendation System</h3>
+      <p>Ensemble ML model on soil nutrients, weather, and environmental data. Improved crop prediction accuracy by 18%. Flutter mobile app delivers real-time recommendations via end-to-end data pipeline.</p>
+      <div class="project-footer">
+        <div class="skill-tags"><span class="tag t-ml">Ensemble ML</span><span class="tag t-py">Python</span><span class="tag t-ml">Flutter</span></div>
+        <span class="proj-date">Mar 2026</span>
+      </div>
+    </div>
+ 
     <div class="project-card">
       <div class="project-top">
         <div class="project-icon" style="background:rgba(241,224,90,0.1)">🛍️</div>
         <span class="tag t-blue" style="font-size:10px">Full-Stack</span>
       </div>
       <h3>Myntra Clone</h3>
-      <p>Responsive full-stack e-commerce application integrated with REST APIs, improving user experience and reducing page load time by 30%.</p>
+      <p>Responsive full-stack e-commerce application with REST API integration, dynamic product management, and Razorpay checkout. Reduced page load time by 30%.</p>
       <div class="project-footer">
         <div class="skill-tags"><span class="tag t-py">React.js</span><span class="tag t-py">Node.js</span><span class="tag t-blue">REST APIs</span></div>
-        <span class="proj-date">Sep 2025</span>
+        <a href="https://github.com/Braj2004/myntra-clone" target="_blank" style="font-size:11px;color:var(--muted);text-decoration:none">GitHub →</a>
       </div>
     </div>
-
-    <div class="project-card">
-      <div class="project-top">
-        <div class="project-icon" style="background:rgba(79,142,247,0.1)">🎮</div>
-        <span class="tag t-blue" style="font-size:10px">JavaScript</span>
-      </div>
-      <h3>Rock Paper Scissors</h3>
-      <p>Interactive browser game built in vanilla JavaScript with clean UI, game logic, and score tracking. One of my early front-end projects.</p>
-      <div class="project-footer">
-        <div class="skill-tags"><span class="tag t-blue">JavaScript</span><span class="tag t-blue">HTML</span><span class="tag t-blue">CSS</span></div>
-        <a href="https://github.com/Braj2004/Rock-Paper-Scissors" target="_blank" style="font-size:11px;color:var(--muted);text-decoration:none">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-top">
-        <div class="project-icon" style="background:rgba(45,212,191,0.1)">🌾</div>
-        <span class="tag t-ml" style="font-size:10px">Research Project</span>
-      </div>
-      <h3>Assam Weather Forecast v1.0</h3>
-      <p>Deep learning weather forecasting web app using 1981–2024 NASA POWER meteorological data. District-wise predictions to support smart agriculture. R² up to 0.98.</p>
-      <div class="project-footer">
-        <div class="skill-tags"><span class="tag t-ml">Deep Learning</span><span class="tag t-py">Python</span><span class="tag t-ml">TensorFlow</span></div>
-        <span class="proj-date">2026</span>
-      </div>
-    </div>
-
+ 
   </div>
   <div style="text-align:center;margin-top:2.2rem">
     <a href="https://github.com/Braj2004?tab=repositories" target="_blank" class="btn-secondary">All repositories on GitHub ↗</a>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- PUBLICATIONS -->
 <section id="publications">
   <p class="section-label">Research</p>
   <h2 class="section-title">Publications</h2>
   <p class="section-desc">Peer-reviewed research applying machine learning and deep learning to real-world problems in agriculture and environmental forecasting.</p>
   <div class="pub-list">
-
+ 
     <div class="pub-card">
       <div class="pub-badge pub-published">✓ Published — March 2026</div>
       <h3>A Crop Recommendation System Using Ensemble Learning Approach for Sustainable Farming</h3>
@@ -424,7 +427,7 @@
         <li>Implemented an end-to-end data pipeline from raw feature data (soil pH, temperature, rainfall, humidity) to model output.</li>
       </ul>
     </div>
-
+ 
     <div class="pub-card">
       <div class="pub-badge pub-submitted">⟳ Submitted — IEEE 2026</div>
       <h3>Time Series Weather Forecasting for Assam Using Deep Learning and Feature Fusion</h3>
@@ -435,12 +438,12 @@
         <li>Designed and implemented Assam Weather Forecast v1.0, a web application providing district-wise weather predictions to support smart agriculture and environmental management.</li>
       </ul>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
   <p class="section-label">Certifications</p>
@@ -469,15 +472,15 @@
     </div>
   </div>
 </section>
-
+ 
 <div class="divider"></div>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-card">
     <p class="section-label" style="margin-bottom:0.5rem">Contact</p>
     <h2>Let's connect</h2>
-    <p>Open to BI Consultant, Data Analyst, and Data Science opportunities. Feel free to reach out.</p>
+    <p>Open to Data Scientist, Data Analyst, BI Analyst, and Machine Learning Engineer opportunities. Feel free to reach out.</p>
     <div class="social-links">
       <a href="mailto:brajnandanprasad21@gmail.com" class="social-link">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -494,10 +497,11 @@
     </div>
   </div>
 </section>
-
+ 
 <footer>
-  <p>© 2026 Brajnandan Prasad · BI &amp; Data Analytics · <a href="https://github.com/Braj2004" target="_blank" style="color:var(--accent);text-decoration:none">github.com/Braj2004</a></p>
+  <p>© 2026 Brajnandan Prasad · Data Science &amp; Data Analytics · <a href="https://github.com/Braj2004" target="_blank" style="color:var(--accent);text-decoration:none">github.com/Braj2004</a></p>
 </footer>
-
+ 
 </body>
 </html>
+ 
